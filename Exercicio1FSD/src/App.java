@@ -17,6 +17,14 @@ public class App {
         } 
         */
 
+        /*
+        CatalogoVeiculos catalogo = new CatalogoVeiculos();
+        // Teste do método consultaPorPlaca
+        List<Veiculo> testPlaca = catalogo.consultaPorPlaca("BRA3E20");
 
+        for(int i=0;i<testPlaca.size();i++){
+            System.out.println("Placa: "+ testPlaca.get(i));
+        }
+        */
     }
 }
