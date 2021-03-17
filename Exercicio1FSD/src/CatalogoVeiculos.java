@@ -8,10 +8,10 @@ public class CatalogoVeiculos {
     List<Veiculo> veiculos = Arrays.asList(
         new Veiculo("BRA2E19", "Honda", "Civic", 2017, 107200.00), 
         new Veiculo("BRA3E20", "Honda", "Accord", 2020, 107201.00),
-        new Veiculo("BRA3E20", "Honda", "Fit", 2015, 107201.00),
-        new Veiculo("BRA3E20", "Audi", "A3", 2006, 107201.00),
-        new Veiculo("BRA3E20", "Effa", "K01", 2019, 107201.00),
-        new Veiculo("BRA3E20", "Effa", "V25", 2020, 107201.00)
+        new Veiculo("BRA4E20", "Honda", "Fit", 2015, 107201.00),
+        new Veiculo("BRA5E20", "Audi", "A3", 2006, 107201.00),
+        new Veiculo("BRA6E20", "Effa", "K01", 2019, 107201.00),
+        new Veiculo("BRA7E20", "Effa", "V25", 2020, 107201.00)
         );
 
 
