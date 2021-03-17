@@ -13,4 +13,14 @@ public class Veiculo {
         this.ano = ano;
         this.valor = valor;
     }
+
+    public String getMarca(){
+        return marca;
+    }
+
+    @Override
+    public String toString() {
+        return "\nVeiculo [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + ", valor="
+                + valor + "]";
+    }
 }
