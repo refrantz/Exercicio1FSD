@@ -18,6 +18,10 @@ public class Veiculo {
         return marca;
     }
 
+    public int getAno(){
+        return ano;
+    }
+
     @Override
     public String toString() {
         return "\nVeiculo [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + ", valor="

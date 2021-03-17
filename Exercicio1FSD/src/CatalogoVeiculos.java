@@ -6,12 +6,12 @@ public class CatalogoVeiculos {
 
     //Lista de veiculos hard coded
     List<Veiculo> veiculos = Arrays.asList(
-        new Veiculo("BRA2E19", "Honda", "Civic", 2016, 107200.00), 
-        new Veiculo("BRA3E20", "Honda", "Accord", 2016, 107201.00),
-        new Veiculo("BRA3E20", "Honda", "Fit", 2016, 107201.00),
-        new Veiculo("BRA3E20", "Audi", "A3", 2016, 107201.00),
-        new Veiculo("BRA3E20", "Effa", "K01", 2016, 107201.00),
-        new Veiculo("BRA3E20", "Effa", "V25", 2016, 107201.00)
+        new Veiculo("BRA2E19", "Honda", "Civic", 2017, 107200.00), 
+        new Veiculo("BRA3E20", "Honda", "Accord", 2020, 107201.00),
+        new Veiculo("BRA3E20", "Honda", "Fit", 2015, 107201.00),
+        new Veiculo("BRA3E20", "Audi", "A3", 2006, 107201.00),
+        new Veiculo("BRA3E20", "Effa", "K01", 2019, 107201.00),
+        new Veiculo("BRA3E20", "Effa", "V25", 2020, 107201.00)
         );
 
 
@@ -34,7 +34,15 @@ public class CatalogoVeiculos {
     }
 
     public List<Veiculo> consultaPorAno(int ano){
-        return null;
+       List<Veiculo> result = new ArrayList();
+
+       for(Veiculo v: veiculos){
+            if (v.getAno() == ano){
+                result.add(v);
+            }
+       }
+
+       return result;
     }
 
     public List<Veiculo> consultaPorTipo(String tipo){
