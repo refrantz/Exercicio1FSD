@@ -21,33 +21,22 @@ public class Veiculo {
         return ano;
     }
 
-    @Override
-    public String toString() {
-        return "\nVeiculo [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + ", valor="
-                + valor + "]";
-    }
-
     public String getPlaca() {
         return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
     }
 
     public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
     public double getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    @Override
+    public String toString() {
+        return "\nVeiculo [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + ", valor="
+                + valor + "]";
     }
+
 }
