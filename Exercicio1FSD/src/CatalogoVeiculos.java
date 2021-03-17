@@ -16,8 +16,16 @@ public class CatalogoVeiculos {
 
 
 
-    public Veiculo consultaPorPlaca(String placa){
-        return null;
+    public List<Veiculo> consultaPorPlaca(String placa){
+        List<Veiculo> result = new ArrayList();
+        placa = placa.toLowerCase();
+
+        for(int i = 0; i < veiculos.size(); i++) {
+            if(placa.equals(veiculos.get(i).getPlaca().toLowerCase())){
+                result.add(veiculos.get(i));
+            }
+        }
+        return result;
     }
 
     public List<Veiculo> consultaPorMarca(String marca){
