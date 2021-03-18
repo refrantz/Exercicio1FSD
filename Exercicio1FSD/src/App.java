@@ -17,14 +17,21 @@ public class App {
         } 
         */
 
-        /*
+
         CatalogoVeiculos catalogo = new CatalogoVeiculos();
         // Teste do método consultaPorPlaca
-        List<Veiculo> testPlaca = catalogo.consultaPorPlaca("BRA3E20");
+        Veiculo testPlaca = catalogo.consultaPorPlaca("BRA3E20");
 
-        for(int i=0;i<testPlaca.size();i++){
-            System.out.println("Placa: "+ testPlaca.get(i));
-        }
-        */
+        System.out.println("Placa: "+ testPlaca);
+
+        // consultaPorTipo
+        List<Veiculo> testTipo = catalogo.consultaPorTipo("utilitario");
+
+        System.out.println("Tipo: ");
+        for(int i=0; i < testTipo.size(); i++){
+            System.out.println(testTipo.get(i));
+        } 
+
+
     }
 }

@@ -12,7 +12,7 @@ public class CatalogoVeiculos {
     VeiculoPassageiros vpr1 = new VeiculoPassageiros("BRA5E20", "Audi", "A3", 2006, 107201.00, 5); 
     VeiculoPassageiros vpr2 = new VeiculoPassageiros("BRA6E20", "Effa", "K01", 2019, 107201.00, 8); 
         
-    VeiculoPassageiros vps1 = new VeiculoPassageiros("BRA7E20", "Effa", "V25", 2020, 107201.00, 8); 
+    VeiculoPasseio vps1 = new VeiculoPasseio("BRA7E20", "Effa", "V25", 2020, 107201.00, 20.0); 
 
     List<Veiculo> veiculos = Arrays.asList(vu1, vu2, vu3, vpr1, vpr2, vps1);
 
@@ -37,9 +37,6 @@ public class CatalogoVeiculos {
             }
         }
 
-        // para não gerar erro quando não encontrar
-        if(result.size() == 0)
-            return null;
         return result;
     }
 
@@ -52,15 +49,13 @@ public class CatalogoVeiculos {
             }
        }
 
-       if(result.size() == 0)
-        return null;
        return result;
     }
 
     // opções de tipo: "passageiros", "passeio", utilitario
     public List<Veiculo> consultaPorTipo(String tipo){
         List<Veiculo> result = new ArrayList();
-        tipo.toLowerCase();
+        tipo.toLowerCase().trim();
         
         if(tipo == "passeio"){
             for(Veiculo v: veiculos){
@@ -86,8 +81,7 @@ public class CatalogoVeiculos {
             }   
         }
         
-
-        return null;
+        return result;
     }
 
 }
