@@ -73,12 +73,16 @@ public class CatalogoVeiculos {
             }   
         }
 
-        else{
+        else if(tipo == "passageiros"){
             for(Veiculo v: veiculos){
                 if(v instanceof VeiculoPassageiros){
                     result.add(v);
                 }
             }   
+        }
+
+        else{
+            System.out.println("Tipo não encontrado");
         }
         
         return result;
