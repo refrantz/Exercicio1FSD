@@ -30,17 +30,16 @@ public class Menu {
     }
     
     public static void menuInicio() {
-        int opcao1;
+        int opcao;
         Scanner entrada = new Scanner(System.in);
         printInicio();
         do {
-            opcao1 = entrada.nextInt();
-
-            switch(opcao1) {
+            opcao = entrada.nextInt();
+            switch(opcao) {
                 case 1:
                     System.out.println("Veiculo Passageiros");
-                    menuConsulta();
-                    break;
+                    menuConsulta(); // Falta separar por tipo a pesquisa, da pra fazer algo menuConsulta(opcao)
+                    break;          
 
                 case 2:
                     System.out.println("Veiculo Passeio");
@@ -60,18 +59,17 @@ public class Menu {
                     System.out.println("Opcao Invalida");
             }
 
-        }while(opcao1 != 0);
-
+        }while(opcao != 0);
     }
 
     public static void menuConsulta() {
         String consulta;
-        int opcao2;
+        int opcao;
         Scanner entrada = new Scanner(System.in);
         printConsulta();
         do {
-            opcao2 = entrada.nextInt();
-            switch(opcao2) {
+            opcao = entrada.nextInt();
+            switch(opcao) {
                 case 1:
                     System.out.println("Digite a placa: ");
                     consulta = entrada.next();                    
@@ -109,7 +107,7 @@ public class Menu {
                 default:
                     System.out.println("Opcao Invalida");
             }
-        }while(opcao2 != 0);
+        }while(opcao != 0);
     }
 
     public static void retornaPlaca(String placa) {
