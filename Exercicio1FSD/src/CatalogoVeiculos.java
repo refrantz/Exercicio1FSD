@@ -56,8 +56,8 @@ public class CatalogoVeiculos {
     public List<Veiculo> consultaPorTipo(String tipo){
         List<Veiculo> result = new ArrayList();
         tipo.toLowerCase().trim();
-        
-        if(tipo == "passeio"){
+
+        if(tipo.equals("passeio")){
             for(Veiculo v: veiculos){
                 if(v instanceof VeiculoPasseio){
                     result.add(v);
@@ -65,7 +65,7 @@ public class CatalogoVeiculos {
             }   
         }
         
-        else if(tipo == "utilitario"){
+        else if(tipo.equals("utilitario")){
             for(Veiculo v: veiculos){
                 if(v instanceof VeiculoUtilitario){
                     result.add(v);
@@ -73,7 +73,7 @@ public class CatalogoVeiculos {
             }   
         }
 
-        else if(tipo == "passageiros"){
+        else if(tipo.equals("passageiros")){
             for(Veiculo v: veiculos){
                 if(v instanceof VeiculoPassageiros){
                     result.add(v);
