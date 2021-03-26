@@ -11,7 +11,13 @@ public class Menu {
     private static String x = "1: Placa \n2: Marca \n3: Ano \n4: Tipo \n0: Finalizar pesquisa.";
     private static String z = "=======================================================================================";
 
-    private static CatalogoVeiculos catalogo = new CatalogoVeiculos();
+    private static CatalogoVeiculos catalogo;
+
+    public Menu(CatalogoVeiculos catalogo){
+
+        this.catalogo = catalogo;
+
+    }
 
     public static void printInicio() {
         System.out.println();
@@ -49,6 +55,7 @@ public class Menu {
             }
 
         } while (opcao != 0);
+        entrada.close();
     }
 
     public static void menuConsulta() {
@@ -97,6 +104,7 @@ public class Menu {
                 System.out.println("Opcao Invalida");
             }
         } while (opcao != 0);
+        entrada.close();
     }
 
     public static void retornaPlaca(String placa) {

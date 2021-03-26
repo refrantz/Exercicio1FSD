@@ -56,8 +56,8 @@ public class App {
                 veiculos.add(new VeiculoUtilitario(placa, marca, modelo, ano, valor, capCargaTon, nroEixos));
             }
             System.out.println(veiculos);
+            Menu user = new Menu(new CatalogoVeiculos(veiculos));
+            user.menuInicio();
     }
-        Menu user = new Menu();
-        user.menuInicio();
     }
 }
