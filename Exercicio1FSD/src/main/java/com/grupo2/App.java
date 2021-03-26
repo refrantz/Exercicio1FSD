@@ -1,5 +1,6 @@
 package com.grupo2;
 
+import java.io.BufferedReader;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,9 +12,10 @@ import org.apache.commons.csv.CSVRecord;
 public class App {
     public static void main(String[] args) throws Exception {
         try ( 
-            Reader reader = Files.newBufferedReader(Paths.get("D:/PUCRS/3_SEMESTRE/Fundamentos_de_D.de_Software/Exercicio1Maven/consultaveiculos/src/main/java/com/grupo2/Entradas/veiculoPasseio.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + "/src/main/java/com/grupo2/Entradas/veiculoPasseio.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) { 
+            reader.readLine();
             for (CSVRecord csvRecord : csvParser) { 
                 // Accessing Values by Column Index 
                 String placa = csvRecord.get(0);
@@ -22,6 +24,7 @@ public class App {
                 String ano = csvRecord.get(3);
                 String valor = csvRecord.get(4);
                 String consumoKmLt = csvRecord.get(5);
+                Integer teste = Integer.parseInt(ano);
                 //todo converter valores de ano para inteiro, valor para double e consumoKmLt para inteiro
 
                 //new VeiculoPassageiros(placa, marca, modelo, ano, valor, consumoKmLt);
