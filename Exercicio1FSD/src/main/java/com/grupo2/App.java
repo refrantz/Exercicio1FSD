@@ -12,10 +12,14 @@ import org.apache.commons.csv.CSVRecord;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        String pathPassageiros = "/classes/com/Entradas/veiculoPassageiros.csv";
+        String pathPasseio = "/classes/com/Entradas/veiculoPasseio.csv";
+        String pathUtilitario = "/classes/com/Entradas/veiculoUtilitario.csv";
+
         try ( 
-            BufferedReader reader = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + "/src/main/java/com/grupo2/Entradas/veiculoPassageiros.csv"));
-            BufferedReader reader2 = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + "/src/main/java/com/grupo2/Entradas/veiculoPasseio.csv"));
-            BufferedReader reader3 = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + "/src/main/java/com/grupo2/Entradas/veiculoUtilitario.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + pathPassageiros));
+            BufferedReader reader2 = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + pathPasseio));
+            BufferedReader reader3 = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + pathUtilitario));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
             CSVParser csvParser2 = new CSVParser(reader2, CSVFormat.DEFAULT);
             CSVParser csvParser3 = new CSVParser(reader3, CSVFormat.DEFAULT);
