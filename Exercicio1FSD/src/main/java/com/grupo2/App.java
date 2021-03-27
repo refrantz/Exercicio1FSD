@@ -12,9 +12,9 @@ import org.apache.commons.csv.CSVRecord;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String pathPassageiros = "/classes/com/Entradas/veiculoPassageiros.csv";
-        String pathPasseio = "/classes/com/Entradas/veiculoPasseio.csv";
-        String pathUtilitario = "/classes/com/Entradas/veiculoUtilitario.csv";
+        String pathPassageiros = "/classes/com/grupo2/Entradas/veiculoPassageiros.csv";
+        String pathPasseio = "/classes/com/grupo2/Entradas/veiculoPasseio.csv";
+        String pathUtilitario = "/classes/com/grupo2/Entradas/veiculoUtilitario.csv";
 
         try ( 
             BufferedReader reader = Files.newBufferedReader(Paths.get(System.getProperty("user.dir") + pathPassageiros));
